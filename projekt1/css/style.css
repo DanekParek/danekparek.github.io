@@ -272,12 +272,13 @@ p{
     display: block;
     margin-bottom: 5px;
     color: white;
+
 }
 #contact-form input,
 #contact-form textarea{
     width: 100%;
     padding: 10px;
-    border: 1px #ddd solid;
+    border: 1px white solid;
 }
 #contact-form textarea{
     height: 130px;
@@ -289,7 +290,15 @@ p{
 }
 #contact-form {
     color: white;
+
 }
+#contact-info{
+    color: white;
+}
+#contact-info .fa{
+    padding: 20px;
+}
+
 
 /*moje*/
 #features .box{
