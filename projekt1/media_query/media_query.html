@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: grey;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .big{
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            display: none;
+        }
+        @media(max-width: 500px)
+        {
+            body{
+                background: red;
+            }
+            #smartphone{
+                display: block;
+            }
+        }
+        @media(min-width:501px) and (max-width: 768px)
+        {
+            body{
+                background: green;
+            }
+            #tablet{
+                display: block;
+            }
+        }
+        @media(min-width:769px) and (max-width: 1200px)
+        {
+            body{
+                background: blue;
+            }
+            #normal{
+                display: block;
+            }
+        }
+        @media(min-width:1201px)
+        {
+            body{
+                background: black;
+            }
+            #widescreen{
+                display: block;
+            }
+        }
+        @media(min-width:501px) and (max-width: 768px)
+        {
+            body{
+                background: green;
+            }
+            #tablet{
+                display: block;
+            }
+        }
+        @media(max-height: 500px) {
+            body{
+                background: orange;
+            }
+            #landscape{
+                display: block;
+            }
+        }
+    </style>
+    <link rel="stylesheet" media="screen and (max-width: 768px)"
+          href="../css/mobile.css">
+</head>
+<body>
+<div id="widescreen"
+     class="big">widescreen
+</div>
+<div id="normal"
+     class="big">normal
+</div>
+<div id="tablet"
+     class="big">tablet
+</div>
+<div id="smartphone"
+     class="big">smartphone
+</div>
+<div id="landscape"
+     class="big">landscape
+</div>
+</body>
+</html>
