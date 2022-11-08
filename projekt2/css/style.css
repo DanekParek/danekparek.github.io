@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Bebas Neue', cursive;
+;
+}
+
+.text-primary{
+    color: #911111;
+}
+p{
+    margin: 0.75rem 0;
+    padding-left: 10px;
+}
+#logo{
+    font-size: larger;
+}
+
+#navbar{
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+#navbar a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navbar ul li a {
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+    background: #911111;
+    border-radius: 2px;
+}
+
+#showcase{
+    background: #333 url("https://source.unsplash.com/random/?gun") no-repeat center center/cover;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
