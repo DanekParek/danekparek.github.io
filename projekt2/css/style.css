@@ -6,11 +6,66 @@
 
 body{
     font-family: 'Bebas Neue', cursive;
-;
 }
 
 .text-primary{
     color: #911111;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+.text-center{
+ text-align: center;
+}
+.m-heading{
+    font-size: 32px;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+.py-1{padding: 1.5rem 0;}
+.py-2{padding: 2.5rem 0;}
+.py-3{padding: 3.5rem 0;}
+
+.l-heading{
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.lead{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.source{
+    color: #aaa;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: small;
+}
+.source a{
+    color: #aaa;
+}
+
+.btn{
+    display: inline-block;
+    color: #fff;
+    background: #911111;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 2px;
+}
+.btn:hover{
+    background-color: #82320f;
+}
+.btn-dark{
+    background-color: #333333;
+    color: #911111;
+}
+a{
+    text-decoration: none;
 }
 p{
     margin: 0.75rem 0;
@@ -53,13 +108,35 @@ p{
 }
 
 #showcase{
-    background: #333 url("https://source.unsplash.com/random/?gun") no-repeat center center/cover;
+    background: #333 url("../img/shotgun.jpg") no-repeat center center/cover;
     height: 100vh;
+    color: #fff;
+}
+#showcase .showcase-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: rgba(0,0,0,0.5);
 }
 
-
-
-
+#about .items{
+    display: flex;
+    padding: 1rem;
+}
+#about .items .item{
+    text-align: center;
+    padding: 1rem;
+}
+#about .items .item i{
+    background-color: #911111;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15%;
+}
 
 
 
