@@ -42,20 +42,20 @@
             <div class="item">
                 <i class="fa fa-map fa-2x"></i>
                 <div>
-                    <h2>Lokace</h2>
+                    <h2>lokace</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, possimus!</p>
                 </div>
             </div><div class="item">
-            <i class="fa fa-gun fa-2x"></i>
-            <div>
-                <h2>Zbraně</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, possimus!</p>
-            </div>
-        </div><div class="item">
-            <i class="fa fa-user fa-2x"></i>
-            <div>
-                <h2>Démoni</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, possimus!</p>
+                <i class="fa fa-gun fa-2x"></i>
+                <div>
+                    <h2>zbraně</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, possimus!</p>
+                </div>
+            </div><div class="item">
+                <i class="fa fa-user fa-2x"></i>
+                <div>
+                    <h2>nepřátelé</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, possimus!</p>
                 </div>
             </div>
         </div>
@@ -76,9 +76,157 @@
     </div>
 </section>
 
+<section id="images" class="py-1">
+    <div class="container">
+        <h2 class="m-heading text-center">
+            <span class="text-primary">Ilustrační</span> obrázky
+        </h2>
+        <div class="items py-1">
+            <div>
+                <img src="./img/img.png"
+                     alt="obrázky">
+            </div>
+            <div>
+                <img src="./img/img_6.png"
+                     alt="obrázky">
+            </div>
+            <div>
+                <img src="./img/img_2.png"
+                     alt="obrázky">
+            </div>
+            <div>
+                <img src="./img/img_7.png"
+                     alt="obrázky">
+            </div>
+            <div>
+                <img src="./img/img_8.png"
+                     alt="obrázky">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-form bg-primary p-2">
+        <h2 class="m-heading"> Napište nám</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Jméno</label>
+                <input type="text"
+                       name="name"
+                       id="name"
+                placeholder="sem napište vaše jméno">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text"
+                       name="email"
+                       id="email"
+                placeholder="sem napište vaše email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="text"
+                       name="phone"
+                       id="phone"
+                placeholder="sem napište vaše telefoní číslo">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Zpráva</label>
+                <textarea name="message"
+                          id="message"
+                          placeholder="sem napište vaši zprávu"
+                ></textarea>
+                <input type="submit" class="btn-dark"
+                       value="odeslat">
+            </div>
+
+
+
+        </form>
+    </div>
+    <div class="contact-adress bg-dark p-2">
+        <h2 class="m-heading">Kontakt</h2>
+        <h2>Adresa provozovny</h2>
+        <ul class="list">
+            <li>Ulice</li>
+            <li>město</li>
+        </ul>
+
+        <h3>Email</h3>
+        <ul class="list">
+            <li>danda@gamer.com</li>
+        </ul>
+
+        <h3>Telefon</h3>
+        <ul class="list">
+            <li>+420 694 206 942</li>
+        </ul>
+
+    </div>
+</section>
+
 <footer id="main-footer" class="bg-light text-center py-1">
-    <div class="container"></div>
+    <div class="container">
         <p>Copyright &copy; 2022 Danda a Panda, s.r.o.</p>
+    </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // Smooth scrolling
+    $('#navbar a, .btn').on('click', function (event) {
+        if (this.hash !== '') {
+            event.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate(
+                {
+                    scrollTop: $(hash).offset().top - 100
+                }, 800
+            )
+        }
+    })
+
+
+    var nav_sections = $('section');
+    var main_nav = $('#navbar li, .mobile-nav');
+
+    $(window).on('scroll', function() {
+
+        var cur_pos = $(this).scrollTop() + 200;
+
+        // Menu Opacity on scrolling and hidding source
+
+        if (cur_pos > 350) {
+            document.querySelector('#navbar').style.opacity = 0.9;
+            document.querySelector('#showcase .source').style.display = "none";
+        }
+        else {
+            document.querySelector('#navbar').style.opacity = 1;
+            document.querySelector('#showcase .source').style.display = "block";
+        }
+
+        // Navigation active state on scroll
+
+        nav_sections.each(function() {
+            var top = $(this).offset().top,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                if (cur_pos <= bottom) {
+                    main_nav.find('a').removeClass('active');
+                }
+                main_nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
+
+            if (cur_pos < 300) {
+                $("#navbar ul li a").removeClass('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>

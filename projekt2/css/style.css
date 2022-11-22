@@ -28,6 +28,9 @@ body{
 .text-primary{
     color: #911111;
 }
+.bg-primary{
+    background-color:#911111;
+}
 .container{
     max-width: 1100px;
     margin: auto;
@@ -180,3 +183,44 @@ p{
     background: url("../img/monkey.jpg")no-repeat center center/cover;
 }
 
+#images .items{
+    display: flex;
+    justify-content: space-between;
+}
+
+#images .items img{
+    display: block;
+    margin: auto;
+    width:  170px;
+    height: 300px;
+    background-size: cover;
+}
+
+#contact {
+    display: flex;
+}
+
+#contact div{
+    flex: 1;
+}
+#contact .contact-form .form-group{
+    margin: 0.75rem;
+}
+#contact .contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+#contact .contact-form input,
+#contact .contact-form textarea{
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+
+}
+#contact h3{
+    margin-top: 3rem;
+}
+#main-footer{
+    display: flex;
+    height: 150px;
+}
