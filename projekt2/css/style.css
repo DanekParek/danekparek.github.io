@@ -191,9 +191,8 @@ p{
 #images .items img{
     display: block;
     margin: auto;
-    width:  170px;
-    height: 300px;
-    background-size: cover;
+    width: 80%;
+
 }
 
 #contact {
