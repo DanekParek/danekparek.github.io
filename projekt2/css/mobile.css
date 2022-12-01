@@ -17,7 +17,28 @@
 @media screen and (max-width: 500px) {
     #navbar {
         flex-direction: column;
-        align-items: center;
+
+        text-align: center;
+    }
+
+    #navbar #hambac {
+        display: block;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: stretch;
+        display: none;
+    }
+
+    #navbar ul li {
+        padding: 0.5rem;
+        border-bottom: grey 1px solid;
+    }
+
+    #navbar ul li:first-child {
+        margin-top: 0.8rem;
+        border-top: grey 1px solid;
     }
 
     #navbar #logo {
@@ -25,28 +46,29 @@
         text-align: center;
     }
 
-    .l-heading{
+    .l-heading {
         letter-spacing: 0;
         font-size: 3rem;
     }
 
-    #project{
+    #project {
         display: block;
         padding: 1rem;
     }
 
-    #project .m-heading{
+    #project .m-heading {
         margin-bottom: 2rem;
     }
 
-    #images .items div:last-child{
+    #images .items div:last-child {
         display: none;
     }
 
-    #contact{
+    #contact {
         flex-direction: column;
     }
 }
+
 
 @media screen and (max-height: 568px){
     .l-heading{
