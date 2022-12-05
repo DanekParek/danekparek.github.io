@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#navbar, #navbar a {
+    color: white;
+    background: cornflowerblue;
+    text-decoration: none;
+}
+
+#navbar ul{ /*nadřazený nad li*/
+    list-style: none; /*bez odrážek*/
+    float: right;
+
+}
+#navbar ul li{ /*podřazený tomu ul*/
+    float: left;
+}
+#navbar ul li a {
+    padding: 20px;
+    display: block;
+
+}
+
+#navbar ul li a:hover{
+    background: white;
+    color: black;
+    border-radius: 50px;
+
+}
+#Search {
+    text-align: center;
+    padding-top: 15rem;
+    display: block;
+
+}
+#Search .inp1{
+    width: 25%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+
+}
+#Search .inp1::placeholder{
+    padding: 20px;
+}
+.container{
+    max-width: 1700px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: auto;
+    display: block
+}
+.colored{
+    padding-bottom: 40px;
+    font-size: 100px;
+}
+
+.inp2{
+    height: 2rem;
+    width: 8%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px;
+}
+.inp3{
+    height: 2rem;
+    width: 8%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    outline-width: 1px;
+    border: 1px;
+}
+.inp2:hover{
+    background: lightgray;
+
+}
+.inp3:hover{
+    background: lightgray;
+}
+.blue{
+    color:dodgerblue;
+}
+.red{
+    color: orangered;
+}
+.yellow{
+    color: orange;
+}
+.green{
+    color: forestgreen;
+}
+label{
+    width:250px;
+    display: inline-block;
+    margin: 8px;
+}
+.i2{
+    width: 373px;
+}
+#advanced{
+    padding: 30px;
+}
+.adp{
+    padding: 40px;
+    margin-left: 60px;
+    font-size: x-large;
+}
+.inpA{
+    margin-top: 25px;
+    margin-left: 480px;
+    width: 160px;
+    height: 30px
+}
+.textinput{
+    width: 369px;
+}
+.inpA{
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+}
+.inpA:hover{
+    background-color: dodgerblue;
+}
+#borderA{
+    border: 1px solid;
+    border-left:none;
+    border-right: none;
+    width: 700px;
+    padding: 10px;
+
+}
+
+
