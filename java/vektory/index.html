@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vektory_css/vektory.css">
     <title>Vektory</title>
     <script>
         // Pouze, pokud je celá stránka (DOM) načtena, spustím funkci (běh programu)
@@ -64,13 +65,16 @@
     </script>
 </head>
 <body>
-<ul>
-    <li>Vstupy</li>
-    <li>Výstupy</li>
-    <li>Větvění</li>
-    <li>Cykly</li>
-    <li>...ostatní (amtematické a přiřazovací operace)</li>
-</ul>
+<div id="logo">Vektory</div>
+<div id="table">
+    <ul class="list">
+        <li>Vstupy</li>
+        <li>Výstupy</li>
+        <li>Větvění</li>
+        <li>Cykly</li>
+        <li>...ostatní (matematické a přiřazovací operace)</li>
+    </ul>
+</div>
 <form>
     A:
     <input type="number"
@@ -110,8 +114,10 @@
            name="dy"
            id="dy"
            placeholder="y">
-    <input type="submit"
-           value="Vypočítat" id="submit">
+    <div><input class="inputbtn" type="submit"
+                value="Vypočítat"
+                id="submit">
+    </div>
 </form>
 
 <p><div id="delkau"></div></p>
