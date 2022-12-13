@@ -12,15 +12,19 @@
             let bx = document.querySelector('#bx').value;
             let by = document.querySelector('#by').value;
 
-            let deleni1 = (ax/bx)
-            let deleni2 = (ay/by)
+            let deleni1 = (bx/ax)
+            let deleni2 = (by/ay)
 
             if (deleni1 === deleni2) {
-                document.querySelector("#rovnobeznost").innerHTML = "jsou rovnoběžné"
+                document.querySelector("#rovnobeznost").innerHTML = "Rovnoběžnost mezi vektory: Ano"
+                document.querySelector("#rovnobeznost2").innerHTML = `Velikost ${deleni2.toFixed(2)}`
             }
+
              else{
-                 document.querySelector("#rovnobeznost").innerHTML = "nejsou rovnoběžné"
-            }
+                 document.querySelector("#rovnobeznost").innerHTML = `Rovnoběžnost mezi vektory: Ne`
+                 document.querySelector("#rovnobeznost2").innerHTML = `Velikost: ${deleni1.toFixed(2)} a ${deleni2.toFixed(2)}`
+             }
+
              return false;
         }
 
@@ -56,7 +60,10 @@
 </form>
 
 
-<div id="rovnobeznost"></div>
+<div>
+    <div id="rovnobeznost"></div>
+    <div id="rovnobeznost2">Násobek:</div>
+</div>
 
 </body>
 </html>
